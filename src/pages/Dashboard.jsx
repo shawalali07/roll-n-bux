@@ -7,7 +7,7 @@ const Dashboard = () => {
   const { data, isLoading } = useChart();
   return (
     <div className="dashboard">
-      <Chart data={data?.reverse()} predictedData={predictedData?.reverse()} />
+      <Chart data={data} predictedData={predictedData?.reverse()} />
     </div>
   );
 };
