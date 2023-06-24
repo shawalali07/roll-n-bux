@@ -1,0 +1,22 @@
+.apexcharts-candlestick-series path:last-child {
+  filter: blur(4px);
+  opacity: 0.5;
+  fill: black;
+  stroke: black;
+  position: relative;
+}
+
+.apexcharts-candlestick-series path:last-child::before {
+  content: "Predicted Content";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  font-size: 16px;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
