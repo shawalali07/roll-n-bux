@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      {true ? (
+      {isLoading ? (
         <Skeleton type="chart" />
       ) : (
         <Chart data={data} predictedData={predictedData?.reverse()} />
