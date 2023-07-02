@@ -13,10 +13,8 @@ export const options = {
     },
   },
   xaxis: {
-    type: "datetime",
-  },
-  xaxis: {
     labels: {
+      type: "datetime",
       style: {
         colors: "#000",
         fontWeight: "semi-bold",

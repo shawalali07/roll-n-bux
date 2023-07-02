@@ -4,7 +4,7 @@ import { options } from "../../../constants/chartOptions";
 import { BTCIcon, ETHIcon } from "../../../assets/icons";
 
 const Chart = ({ data, predictedData }) => {
-  const series = [{ data }];
+  const series = [{ data: data?.reverse() }];
 
   return (
     <div id="chart">
