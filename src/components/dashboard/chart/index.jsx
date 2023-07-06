@@ -8,12 +8,6 @@ const Chart = ({ data, predictedData }) => {
 
   return (
     <div id="chart">
-      <ReactApexChart
-        options={options}
-        series={series}
-        type="candlestick"
-        height={350}
-      />
       <div className="chartHeader">
         <p className="chartHeader-crypto">
           <ETHIcon />
@@ -26,6 +20,13 @@ const Chart = ({ data, predictedData }) => {
           </p>
         </div>
       </div>
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="candlestick"
+        height={500}
+      />
+
       {/* <div className="btn-container">
         <button>Bot Trade</button>
         <button className="audio">Reject Bot</button>
