@@ -12,6 +12,7 @@ const fetchChart = (symbol, interval, limit) => {
 export const useChart = (symbol, interval, limit) => {
   const data = useQuery(["chart"], () => fetchChart(symbol, interval, limit), {
     refetchOnWindowFocus: false,
+    refetchInterval: 1000,
   });
   const newData = data?.data?.data?.map((chartData) => {
     return {
@@ -20,5 +21,5 @@ export const useChart = (symbol, interval, limit) => {
     };
   });
 
-  return { newData, isLoading: data?.isLoading };
+  return { newData, isLoading: data?.isLoading, data };
 };

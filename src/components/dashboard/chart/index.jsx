@@ -10,7 +10,7 @@ const Chart = ({ data, predictedData }) => {
       <div className="chartHeader">
         <p className="chartHeader-crypto">
           <ETHIcon />
-          Ethereum<span>/</span>Bitcoin
+          ETH<span>/</span>BUSD
           <BTCIcon />
         </p>
         <div>
