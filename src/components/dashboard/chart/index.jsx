@@ -4,8 +4,7 @@ import { options } from "../../../constants/chartOptions";
 import { BTCIcon, ETHIcon } from "../../../assets/icons";
 
 const Chart = ({ data, predictedData }) => {
-  const series = [{ data: data?.reverse() }];
-
+  const series = [{ data }];
   return (
     <div id="chart">
       <ReactApexChart

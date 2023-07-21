@@ -1,3 +1,3 @@
 export const serverRoutes = {
-  FETCH_CHART: "/",
+  FETCH_CHART: "/klines",
 };

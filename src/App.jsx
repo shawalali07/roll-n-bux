@@ -3,10 +3,13 @@ import { appRoutes } from "./constants/appRoutes";
 import { browserRoutes } from "./routes/browserRoutes";
 import Layout from "./layout";
 import NotFound from "./components/notFound";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const client = new QueryClient();
 
 function App() {
   return (
-    <div>
+    <QueryClientProvider client={client}>
       <Routes>
         <Route path="/" element={<Navigate to={browserRoutes.DASHBOARD} />} />
         <Route path={browserRoutes.DASHBOARD} element={<Layout />}>
@@ -16,7 +19,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+    </QueryClientProvider>
   );
 }
 

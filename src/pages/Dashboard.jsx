@@ -5,14 +5,14 @@ import { predictedData } from "../constants/data";
 import Skeleton from "../components/skeleton/Skeleton";
 
 const Dashboard = () => {
-  const { data, isLoading } = useChart();
-
+  const { newData, isLoading } = useChart("ETHBUSD", "5m", 50);
+  console.log(newData);
   return (
     <div className="dashboard">
       {isLoading ? (
         <Skeleton type="chart" />
       ) : (
-        <Chart data={data} predictedData={predictedData?.reverse()} />
+        <Chart data={newData} predictedData={predictedData?.reverse()} />
       )}
     </div>
   );

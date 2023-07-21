@@ -1,8 +1,8 @@
 import axios from "axios";
-const { SERVER_URL } = process.env;
+const { REACT_APP_SERVER_URL } = process.env;
 
 export const api = axios.create({
-  baseURL: SERVER_URL,
+  baseURL: REACT_APP_SERVER_URL,
 });
 
 api.interceptors.request.use((request) => {
