@@ -1,8 +1,10 @@
+#chart {
+  height: 556px;
+}
 .dashboard {
   margin-left: 231px;
-  height: 100vh;
 
-  /* background: #abbaab;
+  overflow: auto; /* background: #abbaab;
   background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
   background: linear-gradient(to right, #ffffff, #abbaab); */
 

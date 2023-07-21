@@ -1,7 +1,7 @@
 export const options = {
   chart: {
     type: "candlestick",
-    height: 350,
+    height: 300,
     // background: "beige",
   },
   title: {
