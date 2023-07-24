@@ -4,7 +4,7 @@
 .dashboard {
   margin-left: 231px;
 
-  overflow: auto; /* background: #abbaab;
+  overflow: hidden; /* background: #abbaab;
   background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
   background: linear-gradient(to right, #ffffff, #abbaab); */
 

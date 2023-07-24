@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import { options } from "../../../constants/chartOptions";
 import { BTCIcon, ETHIcon } from "../../../assets/icons";
 
-const Chart = ({ data, predictedData }) => {
+const Chart = ({ data }) => {
   const series = [{ data }];
   return (
     <div id="chart">
@@ -25,11 +25,6 @@ const Chart = ({ data, predictedData }) => {
         type="candlestick"
         height={500}
       />
-
-      {/* <div className="btn-container">
-        <button>Bot Trade</button>
-        <button className="audio">Reject Bot</button>
-      </div> */}
     </div>
   );
 };

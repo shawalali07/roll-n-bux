@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { api } from "../configurations/axiosInterceptors";
 import { serverRoutes } from "../routes/serverRoutes";
 import { data, predictedData } from "../constants/data";
+import axios from "axios";
 
 const fetchChart = (symbol, interval, limit) => {
   return api(
@@ -22,4 +23,27 @@ export const useChart = (symbol, interval, limit) => {
   });
 
   return { newData, isLoading: data?.isLoading, data };
+};
+
+const fetchPrediction = () => {
+  return axios.get("http://127.0.0.1:5000/prediction");
+};
+
+export const usePrediction = () => {
+  const data = useQuery(["prediction"], fetchPrediction, {
+    refetchOnWindowFocus: false,
+    refetchInterval: 1000,
+  });
+  let prediction = [];
+  if (data?.data?.data?.data?.length) {
+    prediction = [data?.data?.data?.data]?.map((chartData) => {
+      console.log("bbbbbbbbbb", chartData);
+      return {
+        x: new Date(),
+        y: [chartData[0], chartData[1], chartData[2], chartData[3]],
+      };
+    });
+  }
+
+  return { prediction };
 };
